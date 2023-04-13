@@ -1,5 +1,4 @@
 import {
-  AttachMoney,
   ChatBubbleOutline,
   DynamicFeed,
   LineStyle,
@@ -8,12 +7,10 @@ import {
   Report,
   Storefront,
   Timeline,
-  TrendingUp,
   WorkOutline,
 } from "@mui/icons-material";
 import "./sidebar.css";
 import { Link } from "react-router-dom";
-import { BarChart } from "recharts";
 
 export default function Sidebar() {
   return (
@@ -28,14 +25,6 @@ export default function Sidebar() {
                 Home
               </li>
             </Link>
-            <li className="sidebarListItem">
-              <Timeline className="sidebarIcon" />
-              Analytics
-            </li>
-            <li className="sidebarListItem">
-              <TrendingUp className="sidebarIcon" />
-              Sales
-            </li>
           </ul>
         </div>
         <div className="sidebarMenu">
@@ -53,14 +42,6 @@ export default function Sidebar() {
                 Products
               </li>
             </Link>
-            <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-              Transactions
-            </li>
-            <li className="sidebarListItem">
-              <BarChart className="sidebarIcon" />
-              Reports
-            </li>
           </ul>
         </div>
         <div className="sidebarMenu">

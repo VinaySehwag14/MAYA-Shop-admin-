@@ -26,7 +26,7 @@ export const login = async (dispatch, user) => {
   }
 };
 
-// //* products
+//* for getting products
 export const getProducts = async (dispatch) => {
   dispatch(getProductStart());
   try {
@@ -37,6 +37,7 @@ export const getProducts = async (dispatch) => {
   }
 };
 
+//* for deleting products
 export const deleteProduct = async (dispatch, id) => {
   dispatch(deleteProductStart());
   try {
@@ -48,6 +49,7 @@ export const deleteProduct = async (dispatch, id) => {
   }
 };
 
+//* for updating products
 export const updateProduct = async (id, data, dispatch) => {
   dispatch(updateProductStart());
   try {
@@ -58,10 +60,12 @@ export const updateProduct = async (id, data, dispatch) => {
     dispatch(updateProductFailure());
   }
 };
+
+//* for adding products
 export const addProduct = async (product, dispatch) => {
   dispatch(addProductStart());
   try {
-    //* firebase already sending object thats why we don't have to convert product to object
+    //? for future self firebase already sending object thats why we don't have to convert product to object
     const res = await userRequest.post(`/products`, product);
     dispatch(addProductSuccess(res.data));
   } catch (err) {

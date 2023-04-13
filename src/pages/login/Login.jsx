@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/apiCalls";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -38,7 +40,7 @@ const Login = () => {
       />
       <button
         onClick={handleClick}
-        redirect="/"
+        // redirect="/"
         style={{ padding: 10, width: 100 }}
       >
         Login
